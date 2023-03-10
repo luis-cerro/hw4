@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: luis-cerro-hw4_production
+  username: luis-cerro-hw4
+  password: LUIS-CERRO-HW4
