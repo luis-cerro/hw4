@@ -1,16 +1,23 @@
 <h1><%= @place["name"] %></h1>
 
 <% if @current_user %> 
-<h2>My Posts</h2>
+<h2>My Posts </h2>
+
+<div class="mt-5 mb-5">
 <p>
   <a href="/posts/new?place_id=<%= @place["id"] %>" class="btn btn-primary">New Post</a>
 </p>
+</div>
 
-<% for post in @posts %>
-  <h3><%= post["title"] %></h3>
-  <h4><%= post["posted_on"] %></h4>
-  <p><%= post["description"] %></p>
-<% end %>
+<div class="row mt-5 mb-5">
+  <% for post in @posts %>
+    <div class="col-lg-4 col-sm-12">
+      <h3><%= post["title"] %></h3>
+      <h4><%= post["posted_on"] %></h4>
+      <p><%= post["description"] %></p>
+    </div>
+  <% end %>
+</div>
 
 <p>
   <a href="/places" class="btn btn-secondary">Back to All Places</a>
