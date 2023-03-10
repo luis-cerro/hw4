@@ -2,10 +2,12 @@
 
 <%= form_with :model => @place do |form| %>
   <p>
-    <%= form.label "name" %>
-    <%= form.text_field "name" %>
+  <div class="mb-3">
+    <%= form.label "name", class: "form-label" %>
+    <%= form.text_field "name", class: "form-control" %>
+    </div>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit "Create place", class: "btn btn-primary" %>
   </p>
 <% end %>
